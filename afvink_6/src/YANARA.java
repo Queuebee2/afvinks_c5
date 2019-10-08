@@ -1,5 +1,3 @@
-import com.sun.xml.internal.messaging.saaj.soap.JpegDataContentHandler;
-import com.sun.xml.internal.ws.api.ha.StickyFeature;
 
 import javax.swing.*;
 import javax.swing.border.Border;
@@ -8,10 +6,18 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 
 
+public class YANARA extends JFrame implements KeyListener, ActionListener {
 
-public class YANARA extends JFrame implements KeyListener {
+
+    // https://www.chem.wisc.edu/deptfiles/genchem/netorial/modules/biomolecules/modules/protein1/prot13.htm
+    static final String[] POLAR = {"S", "T", "C", "N", "Q", "Q", "Y"};
+    static final String[] APOLAR = {"G", "A", "V", "L", "I", "P", "F", "M", "W"};
 
     public static int WIDTH = 680, HEIGHT = WIDTH / 12 * 9;
 
@@ -27,6 +33,7 @@ public class YANARA extends JFrame implements KeyListener {
     private JProgressBar polarityProgressBar;
     private JProgressBar aPolarityPorgessBar;
 
+    JFileChooser fileBrowser;
 
 
     public static Dimension prefferedButtonSizeDimension = new Dimension(100, 40);
@@ -37,6 +44,9 @@ public class YANARA extends JFrame implements KeyListener {
 
 
     YANARA() {
+        fileBrowser = new JFileChooser(".");
+
+
         setSize(WIDTH, HEIGHT);
 //        YAGFTP gui = new YAGFTP(WIDTH, HEIGHT);
 //        add(gui);
@@ -63,6 +73,7 @@ public class YANARA extends JFrame implements KeyListener {
         browseFileButton = new JButton("blader");
         browseFileButton.setPreferredSize(prefferedButtonSizeDimension);
         browseFileButton.addKeyListener(this);
+        browseFileButton.addActionListener(this);
         topPanelCenter.add(browseFileButton);
         analyseButton = new JButton("analyseren");
         analyseButton.setPreferredSize(prefferedButtonSizeDimension);
@@ -87,7 +98,6 @@ public class YANARA extends JFrame implements KeyListener {
         progressBarContainer.add(percentageLabel, BorderLayout.WEST);
 
 
-
         polarityProgressBar = new JProgressBar();
         polarityProgressBar.setPreferredSize(prefferedProgressBarSizeDimension);
         aPolarityPorgessBar = new JProgressBar();
@@ -108,14 +118,15 @@ public class YANARA extends JFrame implements KeyListener {
 
         setVisible(true);
 
-        mainTextArea.setText("Press tab or shift-tab to move around the components \n press escape to quit the application at any time(??)");
+        mainTextArea.setText("Press tab or shift-tab to move around the components \n press escape to quit the application at any time");
         mainTextArea.requestFocus();
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ClassNotFoundException, UnsupportedLookAndFeelException, InstantiationException, IllegalAccessException {
 
+        UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         YANARA main = new YANARA();
-        YAGFTP second = new YAGFTP();
+        // YAGFTP second = new YAGFTP();
 
     }
 
@@ -135,11 +146,12 @@ public class YANARA extends JFrame implements KeyListener {
 
         }
         if (firstPress) {
-            if ( source == mainTextArea) {
+            if (source == mainTextArea) {
                 firstPress = false;
                 mainTextArea.setText("");
             }
         }
+
         if (source == mainTextArea) {
             if (key == KeyEvent.VK_TAB) {
                 if (e.getModifiers() > 0) {
@@ -149,11 +161,94 @@ public class YANARA extends JFrame implements KeyListener {
                 }
                 e.consume();
             }
+
         }
+
+
     }
 
     @Override
     public void keyReleased(KeyEvent e) {
 
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        Object source = e.getSource();
+
+        if (source == browseFileButton) {
+            int returnVal = fileBrowser.showOpenDialog(this);
+            if (returnVal == JFileChooser.APPROVE_OPTION) {
+                File file = fileBrowser.getSelectedFile();
+
+                // do stuff with file handle
+                String filename = file.getName();
+
+                // show file in textInputField
+                fileInputTextField.setText(filename);
+                fileInputTextField.setCaretPosition(0);     // user can read input file from [0->textbox.len]
+
+                // read through file
+                BufferedReader reader;
+                try {
+                    reader = new BufferedReader(new FileReader(filename));  // or should I pass the file?
+                    String line = reader.readLine(); // header skip
+
+                    int polar = 0;
+                    int apolar = 0;
+
+                    while (line != null) {
+                        if (firstPress) {
+                            mainTextArea.setText("");
+                        }
+                        System.out.println(line);
+                        mainTextArea.append(line);
+                        // read next line
+                        line = reader.readLine();
+
+                        if (line.startsWith(">")) {
+                            System.out.println("SKIPPED: " +line);
+                        } else {
+                            for (int i = 0; i < line.length(); i++) {
+                                char c = line.charAt(i);
+                                System.out.println(c);
+
+                                boolean itsPolar = false;
+
+                                for (int p = 0; p < POLAR.length; p++) {
+                                    if (POLAR[p].equals(c)) {
+                                        itsPolar = true;
+                                        continue;
+
+                                    }
+                                }
+
+                                if (!itsPolar) {
+                                    for (int p = 0; p < APOLAR.length; p++) {
+                                        if (APOLAR[p].equals(c)) {
+                                            apolar++;
+                                            continue;
+                                        }
+                                    }
+                                }
+
+
+                            }
+
+                            System.out.println("pol:"+polar+" apol:"+apolar);
+
+
+                        }
+
+
+                    }
+                    reader.close();
+                } catch (IOException exc) {     // e already taken
+                    exc.printStackTrace();
+                }
+
+            }
+
+        }
     }
 }

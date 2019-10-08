@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93cb9c5e-afca-437b-93ff-e83b1cd1c23e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../afvink_4/Afvink_4_2/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../afvink_4/Afvink_4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../afvink_4/Afvink_4/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../afvink_4/Afvink_4_2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../afvink_4/Afvink_4_2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../afvink_4/Afvink_4_2/out/production/HorseRace/META-INF/HorseRace.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../afvink_4/Afvink_4_2/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/../afvink_4/Afvink_4_2/src/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../afvink_4/Afvink_4_2/src/RaceGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/../afvink_4/Afvink_4_2/src/RaceGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../afvink_4/Afvink_4_2/src/RaceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../afvink_4/Afvink_4_2/src/RaceManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/One2Three.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/One2Three.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../afvink_6/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../afvink_6/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../afvink_6/src/YANARA.java" beforeDir="false" afterPath="$PROJECT_DIR$/../afvink_6/src/YANARA.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -89,6 +82,7 @@
       <workItem from="1569845739585" duration="12214000" />
       <workItem from="1569916377020" duration="1255000" />
       <workItem from="1570006465041" duration="436000" />
+      <workItem from="1570519628162" duration="1077000" />
     </task>
     <servers />
   </component>
