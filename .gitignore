@@ -21,31 +21,7 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
-afvink_6/src/YAGFTP.java
-afvink_6/doc/YANARA.html
-afvink_6/doc/YAGFTP.html
-afvink_6/doc/stylesheet.css
-afvink_6/doc/serialized-form.html
-afvink_6/doc/script.js
-afvink_6/doc/package-tree.html
-afvink_6/doc/package-summary.html
-afvink_6/doc/package-list
-afvink_6/doc/package-frame.html
-afvink_6/doc/overview-tree.html
-afvink_6/doc/index.html
-afvink_6/doc/index-files/index-6.html
-afvink_6/doc/index-files/index-5.html
-afvink_6/doc/index-files/index-4.html
-afvink_6/doc/index-files/index-3.html
-afvink_6/doc/index-files/index-2.html
-afvink_6/doc/index-files/index-1.html
-afvink_6/doc/help-doc.html
-afvink_6/doc/deprecated-list.html
-afvink_6/doc/constant-values.html
-afvink_6/doc/allclasses-noframe.html
-afvink_6/doc/allclasses-frame.html
+afvink_6/doc/*
 afvink_6/.idea/uiDesigner.xml
-Bi5a_Afvinkopdracht 6.pdf
-afvink_4/Afvink_4_2/out/production/HorseRace/META-INF/HorseRace.kotlin_module
-afvink_4/Afvink_4_2/out/production/HorseRace/META-INF/HorseRace.kotlin_module
-afvink_4/Afvink_4_2/out/production/HorseRace/META-INF/HorseRace.kotlin_module
+*.pdf
+afvink_4/Afvink_4_2/out/*
