@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="93cb9c5e-afca-437b-93ff-e83b1cd1c23e" name="Default Changelist" comment="" />
+    <list default="true" id="93cb9c5e-afca-437b-93ff-e83b1cd1c23e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../afvink_4/Afvink_4_2/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../afvink_4/Afvink_4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../afvink_4/Afvink_4/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../afvink_4/Afvink_4_2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../afvink_4/Afvink_4_2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../afvink_4/Afvink_4_2/out/production/HorseRace/META-INF/HorseRace.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../afvink_4/Afvink_4_2/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/../afvink_4/Afvink_4_2/src/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../afvink_4/Afvink_4_2/src/RaceGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/../afvink_4/Afvink_4_2/src/RaceGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../afvink_4/Afvink_4_2/src/RaceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../afvink_4/Afvink_4_2/src/RaceManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/One2Three.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/One2Three.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +26,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
     <exe-path />
@@ -22,10 +36,13 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectId" id="1RYYwtHwkLG95m61e4kVrdxtZBu" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last.edited.regexp" value="dfasdfafaewrgfagf34gpinjhi43i g34jgpa&#10;'4j g&#10;a43g&#10;aj4&#10; gj;lka34&#10; g ja34&#10; ;gja43&#10; ;g j&#10; ;al34g &#10; ;jkla43jg&#10; ;l ka43&#10; ;jga4g &#10; a;ew4ljg 'laerhg'lawerhfj 'lawejgh f'34wh t;k3a4jgh;kawh'lg h34o'[t guaj4[o gh[ao34it jg[a3w4oiu gh[oawihg f[ewaoiruhg " />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -70,10 +87,25 @@
       <option name="presentableId" value="Default" />
       <updated>1569845737987</updated>
       <workItem from="1569845739585" duration="12214000" />
+      <workItem from="1569916377020" duration="1255000" />
+      <workItem from="1570006465041" duration="436000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

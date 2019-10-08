@@ -22,7 +22,10 @@ public class One2Three extends JFrame {
     private JTextArea oneCharText;
     private JTextArea threeCharText;
     private JButton translateButton;
+    private static String newChars;
     private static String lastChars = "";
+    private static String lastOneChars = "";
+    private static String lastThreeChars = "";
 
 
     private void createAndShowGUI(int width, int height) {
@@ -60,7 +63,7 @@ public class One2Three extends JFrame {
                     newChars = translator.translateOne2Three(oneChars);
                     threeCharText.setText(newChars);
                     lastChars = newChars;
-                } else if (threeChars.length() > 1 && (!lastChars.equals(threeChars))) {
+                } else {
                     try {
                         newChars = translator.translateThree2One(threeChars);
                         oneCharText.setText(newChars);
