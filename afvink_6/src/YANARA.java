@@ -1,6 +1,5 @@
 
 import javax.swing.*;
-import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -31,7 +30,7 @@ public class YANARA extends JFrame implements KeyListener, ActionListener {
 
     private JPanel progressBarContainer;
     private JProgressBar polarityProgressBar;
-    private JProgressBar aPolarityPorgessBar;
+    private JProgressBar aPolarityProgressBar;
 
     JFileChooser fileBrowser;
 
@@ -97,14 +96,24 @@ public class YANARA extends JFrame implements KeyListener, ActionListener {
         progressBarContainer.setLayout(new BorderLayout());
         progressBarContainer.add(percentageLabel, BorderLayout.WEST);
 
-
+        // polaire indicator
         polarityProgressBar = new JProgressBar();
         polarityProgressBar.setPreferredSize(prefferedProgressBarSizeDimension);
-        aPolarityPorgessBar = new JProgressBar();
-        aPolarityPorgessBar.setPreferredSize(prefferedProgressBarSizeDimension);
+        polarityProgressBar.setString("polair: 0/0");
+        polarityProgressBar.setStringPainted(true);
+        polarityProgressBar.setBackground(new Color(0xF60003));
+        // apolaire indicator
+        aPolarityProgressBar = new JProgressBar();
+        aPolarityProgressBar.setPreferredSize(prefferedProgressBarSizeDimension);
+        aPolarityProgressBar.setString("apolair: 0/0");
+        aPolarityProgressBar.setStringPainted(true);
+        aPolarityProgressBar.setBackground(new Color(0x5D61ED));
+        polarityProgressBar.setForeground(new Color(239, 26, 37));
+        aPolarityProgressBar.setForeground(new Color(131, 126, 238));
+
 
         progressBarContainerCenter.add(polarityProgressBar);
-        progressBarContainerCenter.add(aPolarityPorgessBar);
+        progressBarContainerCenter.add(aPolarityProgressBar);
         progressBarContainer.add(progressBarContainerCenter, BorderLayout.CENTER);
         add(progressBarContainer, BorderLayout.SOUTH);
 
@@ -118,6 +127,9 @@ public class YANARA extends JFrame implements KeyListener, ActionListener {
 
         setVisible(true);
 
+
+
+        mainTextArea.setLineWrap(true);
         mainTextArea.setText("Press tab or shift-tab to move around the components \n press escape to quit the application at any time");
         mainTextArea.requestFocus();
     }
@@ -140,7 +152,6 @@ public class YANARA extends JFrame implements KeyListener, ActionListener {
         int key = e.getKeyCode();
         Object source = e.getSource();
 
-        System.out.println(key);
         if (key == KeyEvent.VK_ESCAPE) {
             System.exit(1);
 
@@ -172,6 +183,23 @@ public class YANARA extends JFrame implements KeyListener, ActionListener {
 
     }
 
+    static boolean itsSomething(String c, String[] something) {
+        for (int i = 0; i < something.length; i++) {
+            if (something[i].equals(c)) {
+                return true;
+            }
+
+        }
+        return false;
+    }
+
+    static boolean itsPolar(String c) {
+        return itsSomething(c, POLAR);
+    }
+    static boolean itsAPolar(String c) {
+        return itsSomething(c, APOLAR);
+    }
+
     @Override
     public void actionPerformed(ActionEvent e) {
         Object source = e.getSource();
@@ -193,56 +221,55 @@ public class YANARA extends JFrame implements KeyListener, ActionListener {
                 try {
                     reader = new BufferedReader(new FileReader(filename));  // or should I pass the file?
                     String line = reader.readLine(); // header skip
+                    mainTextArea.append(line + "\n");
+                    line = reader.readLine();
+
 
                     int polar = 0;
                     int apolar = 0;
+                    int seqLength = 0;
 
                     while (line != null) {
+
+                        seqLength+= line.length();
+
                         if (firstPress) {
                             mainTextArea.setText("");
+                            firstPress = false;
                         }
                         System.out.println(line);
-                        mainTextArea.append(line);
-                        // read next line
-                        line = reader.readLine();
+                        mainTextArea.append(line+ "\n");
 
-                        if (line.startsWith(">")) {
-                            System.out.println("SKIPPED: " +line);
-                        } else {
-                            for (int i = 0; i < line.length(); i++) {
-                                char c = line.charAt(i);
-                                System.out.println(c);
+                        for (int i = 0; i < line.length(); i++) {
+                            String c = Character.toString(line.charAt(i));
+                            System.out.println(c);
 
-                                boolean itsPolar = false;
-
-                                for (int p = 0; p < POLAR.length; p++) {
-                                    if (POLAR[p].equals(c)) {
-                                        itsPolar = true;
-                                        continue;
-
-                                    }
-                                }
-
-                                if (!itsPolar) {
-                                    for (int p = 0; p < APOLAR.length; p++) {
-                                        if (APOLAR[p].equals(c)) {
-                                            apolar++;
-                                            continue;
-                                        }
-                                    }
-                                }
-
-
+                            if (itsPolar(c)) {
+                                polar++;
+                            } else if (itsAPolar(c)) {
+                                apolar++;
                             }
 
-                            System.out.println("pol:"+polar+" apol:"+apolar);
-
-
                         }
+                        // read line for next iteration
+                        line = reader.readLine();
+
+
 
 
                     }
+
                     reader.close();
+                    System.out.println("Polar: " + polar + " aPolar: " + apolar);
+                    polarityProgressBar.setValue(polar);
+                    polarityProgressBar.setString("polair: "+String.valueOf(polar) + "/" + seqLength);
+                    polarityProgressBar.setMinimum(0);
+                    polarityProgressBar.setMaximum(seqLength);
+
+                    aPolarityProgressBar.setValue(apolar);
+                    aPolarityProgressBar.setString("apolair: "+ String.valueOf(apolar) + "/" + seqLength);
+                    aPolarityProgressBar.setMinimum(0);
+                    aPolarityProgressBar.setMaximum(seqLength);
                 } catch (IOException exc) {     // e already taken
                     exc.printStackTrace();
                 }
