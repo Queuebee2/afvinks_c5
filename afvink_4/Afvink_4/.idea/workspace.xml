@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d4f94a09-7d23-4e1c-bd32-96022de775d4" name="Default Changelist" comment="" />
+    <list default="true" id="d4f94a09-7d23-4e1c-bd32-96022de775d4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Afvink_4_2/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../afvink_5/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Afvink_4_2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Afvink_4_2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Afvink_4_2/out/production/HorseRace/META-INF/HorseRace.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Afvink_4_2/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Afvink_4_2/src/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Afvink_4_2/src/RaceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Afvink_4_2/src/RaceManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../afvink_5/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../afvink_5/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,7 +24,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
   <component name="ProjectId" id="1QxTjf8tYkbmsmoQQv1AG7RYyGL" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.Annotations" value="false" />
@@ -23,7 +36,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -89,10 +102,25 @@
       <workItem from="1569491304663" duration="2004000" />
       <workItem from="1569701339936" duration="6032000" />
       <workItem from="1569748827149" duration="632000" />
+      <workItem from="1569916365276" duration="267000" />
+      <workItem from="1569916981340" duration="1284000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

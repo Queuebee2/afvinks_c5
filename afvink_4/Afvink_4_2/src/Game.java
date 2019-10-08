@@ -31,10 +31,6 @@ public class Game extends Canvas implements Runnable {
         raceManager = new RaceManager(handler, hud);
 
 
-
-
-
-
     }
 
 

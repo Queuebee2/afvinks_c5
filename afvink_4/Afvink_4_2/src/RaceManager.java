@@ -47,8 +47,8 @@ public class RaceManager {
                     Creature contestant = handler.object.get(i);
 
                     if (contestant.getX() > 300) { //  todo make global
-                        raceState = STATE.Finished;
-                        tickTimer = 1000;
+                            raceState = STATE.Finished;
+                            tickTimer = 1000;
                     }
                     contestant.move();
                 }

@@ -18,6 +18,7 @@ public class RaceGUI extends JFrame {
 
     public RaceGUI(int width, int height, Game game) {
 
+
         setTitle("HorseRacingGame");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
