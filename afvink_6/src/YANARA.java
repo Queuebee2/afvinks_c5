@@ -58,7 +58,7 @@ public class YANARA extends JFrame implements KeyListener, ActionListener {
         add(topPanel, BorderLayout.NORTH);
         topPanel.setLayout(new BorderLayout());
 
-        fileInputLabel = new JLabel("bestand");
+        fileInputLabel = new JLabel("   bestand");
         topPanel.add(fileInputLabel, BorderLayout.WEST);
 
         JPanel topPanelCenter = new JPanel();
@@ -79,7 +79,7 @@ public class YANARA extends JFrame implements KeyListener, ActionListener {
         analyseButton.addKeyListener(this);
         topPanelCenter.add(analyseButton);
 
-        informationLabel = new JLabel("informatie");
+        informationLabel = new JLabel("   informatie");
         add(informationLabel, BorderLayout.WEST);
 
         mainTextArea = new JTextArea();
@@ -92,7 +92,7 @@ public class YANARA extends JFrame implements KeyListener, ActionListener {
         JPanel progressBarContainerCenter = new JPanel();
         progressBarContainerCenter.setPreferredSize(new Dimension(380, 120));
 
-        percentageLabel = new JLabel("percentage");
+        percentageLabel = new JLabel("   percentage");
         progressBarContainer.setLayout(new BorderLayout());
         progressBarContainer.add(percentageLabel, BorderLayout.WEST);
 
