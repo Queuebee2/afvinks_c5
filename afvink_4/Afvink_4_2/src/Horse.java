@@ -28,6 +28,7 @@ public class Horse extends Creature {
     @Override
     public void tick() {
         x =  Game.clamp(x, 0, 400);
+        System.out.println(horseNumber);
 
     }
 

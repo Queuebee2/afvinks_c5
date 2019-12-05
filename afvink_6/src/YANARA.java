@@ -43,6 +43,7 @@ public class YANARA extends JFrame implements KeyListener, ActionListener {
 
 
     YANARA() {
+        // constructor btw
         fileBrowser = new JFileChooser(".");
 
 

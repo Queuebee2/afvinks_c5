@@ -11,6 +11,7 @@ public class YAGFTP extends JFrame {
 
 
     YAGFTP() {
+        System.out.println("");
         // constructor
 
         setSize(500, 500);

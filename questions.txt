@@ -1,0 +1,112 @@
+en als ik keylisteners toevoeg, alle componenten met dezelfde keylistener tegelijkertijd?
+Convention?
+	- create vars outside class
+	- instantiate inside class
+	- set behaviour directly after instancing
+	- add keylisteners
+	- add to parent after setting behaviour
+
+JPanel myJpanel;
+JButton myButton;
+
+class MyClass{
+	
+	myPanel = new JPanel();
+	myPanel.dothis();
+	myPanel.dothat();
+	myPanel.addKeyListener(this);
+	myPanel.setSize(someWidth, someHeight);
+	add(Mypanel);
+
+	myButton = new JButton();
+	myButton.dothat();
+	myButton.setThisDefaultBehaviour();
+	myButton.addKeyListener(this);
+	add(myButton);
+
+}
+
+================================================================
+
+Convention?
+	- create vars outside class
+	- instantiate all components first
+	- set behaviour & add keylisteners for each component and add them to parent
+
+
+JPanel myJpanel;
+JButton myButton;
+
+class MyClass{
+	
+	myPanel = new JPanel();
+	myButton = new JButton();
+
+
+	myPanel.dothis();
+	myPanel.dothat();
+	myPanel.addKeyListener(this);
+	myPanel.setSize(someWidth, someHeight);
+	add(Mypanel);
+
+	myButton.dothat();
+	myButton.setThisDefaultBehaviour();
+	myButton.addKeyListener(this);
+	add(myButton);
+
+}
+
+================================================================
+
+Convention?
+	- create vars inside
+	- instantiate inside class
+	- set behaviour directly after instancing
+	- add keylisteners
+	- add to parent after setting behaviour
+
+class MyClass{
+	
+	JPanel myPanel = new JPanel();
+	Jbutton myButton = new JButton();
+
+	myPanel.dothis();
+	myPanel.dothat();
+	myPanel.addKeyListener(this);
+	myPanel.setSize(someWidth, someHeight);
+
+	myButton.dothat();
+	myButton.setThisDefaultBehaviour();
+	myButton.addKeyListener(this);	
+
+	add(Mypanel);
+	add(myButton);
+
+}
+
+================================================================
+
+Convention?
+
+JPanel myJpanel;
+JButton myButton;
+
+class MyClass{
+	
+	myPanel = new JPanel();
+	myButton = new JButton();
+
+
+	myPanel.dothis();
+	myPanel.dothat();
+	myPanel.addKeyListener(this);
+	myPanel.setSize(someWidth, someHeight);
+	add(Mypanel);
+
+	myButton.dothat();
+	myButton.setThisDefaultBehaviour();
+	myButton.addKeyListener(this);
+	add(myButton);
+
+}
+

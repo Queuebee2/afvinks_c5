@@ -2,15 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65de4fc1-ec95-4024-b55a-52070fbfc684" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../afvink_5/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Afvink_4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Afvink_4/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SeqVisualizer/SeqVisualizer.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Paardrace_3/.idea/$PRODUCT_WORKSPACE_FILE$" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Paardrace_3/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/HorseRace/META-INF/HorseRace.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RaceGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RaceGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RaceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RaceManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../afvink_5/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../afvink_5/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Horse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Horse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Paardrace_3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Paardrace_3/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Paardrace_3/src/Paard.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Paardrace_3/src/Paard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Paardrace_3/src/RaceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Paardrace_3/src/RaceManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../afvink_6/src/YAGFTP.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../afvink_6/src/YAGFTP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../afvink_6/src/YANARA.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../afvink_6/src/YANARA.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,7 +43,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Afvink_4" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -122,6 +124,7 @@
       <workItem from="1569920071929" duration="676000" />
       <workItem from="1569925000964" duration="110000" />
       <workItem from="1569926659359" duration="88000" />
+      <workItem from="1572520417862" duration="55000" />
     </task>
     <servers />
   </component>

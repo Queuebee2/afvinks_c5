@@ -1,7 +1,4 @@
-import com.sun.corba.se.impl.orbutil.graph.Graph;
-
 import java.awt.*;
-import java.sql.Statement;
 import java.util.LinkedList;
 
 public class RaceManager {
@@ -9,6 +6,7 @@ public class RaceManager {
 
     private LinkedList<Paard> winners = new LinkedList<Paard>();
     public LinkedList<Paard> paarden = new LinkedList<Paard>();
+    private Timer
 
     private Graphics g;
 
@@ -33,8 +31,14 @@ public class RaceManager {
         resetHorses();
         System.out.println("Race Started");
 
+        int UPDATES_PER_SECOND = 60;
+        int UPDATE_DEVIDER = 1000000;
+        long execStamp = System.nanoTime() / UPDATE_DEVIDER;
+
         while (RaceState == STATE.RaceInProgress) {
-            move(this.g);
+
+            long now = System.nanoTime() /
+            tick(this.g);
             checkWinners();      // switches state when there are winners.
         }
 
@@ -46,11 +50,12 @@ public class RaceManager {
 
     }
 
-    public void move(Graphics g) {
+    public void tick(Graphics g) {
         for (int i = 0; i < this.paarden.size(); i++) {
             Paard tempPaard =  this.paarden.get(i);
             tempPaard.move();
             tempPaard.render(g);
+
             if (winningHorse(tempPaard)) {
                 this.winners.add(tempPaard);
             }

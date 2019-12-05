@@ -14,12 +14,14 @@ public class Paard {
     private int y;
     private String name;
     private Random r;
+    private Color kleur;
 
     public Paard(String name, int x) {
         this.name = name;
         this.x = x;
         this.y = (PAARDCOUNT*15) + (15*PAARDCOUNT);
         this.r = new Random();
+        this.kleur = new Color(r.nextInt(200), r.nextInt(200), r.nextInt(200));
         PAARDCOUNT++;
     }
 
@@ -36,7 +38,7 @@ public class Paard {
     }
 
     public void render(Graphics g) {
-        g.setColor(new Color(189, 133, 45));
+        g.setColor(this.kleur);
         g.fillOval(x, y,15 ,15);
     }
 
