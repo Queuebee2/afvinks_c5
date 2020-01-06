@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 public class PaardenRace extends JFrame implements ActionListener {
 
     public static int AANTALPAARDEN = 6;
+    public static int MAXSTEPSIZE = 55;
     public static int FINISHLINE = 200;
     public static int WIDTH = 800, HEIGHT = 400;
 

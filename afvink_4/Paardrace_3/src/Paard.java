@@ -34,7 +34,7 @@ public class Paard {
     }
 
     public void move() {
-        this.x += r.nextInt(5);
+        this.x += r.nextInt(PaardenRace.MAXSTEPSIZE);
     }
 
     public void render(Graphics g) {
