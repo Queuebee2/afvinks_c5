@@ -6,7 +6,7 @@ public class RaceManager {
 
     private LinkedList<Paard> winners = new LinkedList<Paard>();
     public LinkedList<Paard> paarden = new LinkedList<Paard>();
-    private Timer
+
 
     private Graphics g;
 
@@ -19,10 +19,11 @@ public class RaceManager {
     public STATE RaceState = STATE.Waiting;
 
     public RaceManager(Graphics g) {
+
         for (int i = 0; i < PaardenRace.AANTALPAARDEN; i++) {
             addObject(new Paard());
         }
-
+        // graphics komen van het raceveld af (een JPanel)
         this.g = g;
     }
 
@@ -37,7 +38,7 @@ public class RaceManager {
 
         while (RaceState == STATE.RaceInProgress) {
 
-            long now = System.nanoTime() /
+            long now = System.nanoTime();
             tick(this.g);
             checkWinners();      // switches state when there are winners.
         }
