@@ -52,8 +52,12 @@ public class RaceManager {
     }
 
     public void tick(Graphics g) {
+        // dit is nieuw 
+        g.setColor(Color.green);
+        g.fillRect(0,0, PaardenRace.WIDTH, PaardenRace.HEIGHT);
         for (int i = 0; i < this.paarden.size(); i++) {
             Paard tempPaard =  this.paarden.get(i);
+
             tempPaard.move();
             tempPaard.render(g);
 
